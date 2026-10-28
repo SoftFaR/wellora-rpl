@@ -26,7 +26,7 @@
         <a href="#beranda" class="nav-item active">Beranda</a>
         <a href="#fitur" class="nav-item">Fitur</a>
         <a href="#tentang" class="nav-item">Tentang Kami</a>
-        <a href="#solusi" class="nav-item">Artikel</a>
+        <a href="#artikel" class="nav-item">Artikel</a>
         <a href="#kontak" class="nav-item">Contact</a>
       </nav>
 
@@ -112,7 +112,7 @@
     </section>
 
     <!-- SOLUTION SECTION -->
-    <section class="solution" id="solusi">
+    <section class="solution">
       <div class="solution-container">
         <div class="solution-left">
           <span class="solution-badge">Semua yang Anda Butuhkan</span>
@@ -378,7 +378,7 @@
                 <label>Nama Lengkap</label>
                 <input type="text" placeholder="Masukkan nama Anda">
               </div>
-              <div class="form-group">
+              <div class="form-group"> 
                 <label>Alamat Email</label>
                 <input type="email" placeholder="nama@email.com">
               </div>
@@ -424,5 +424,35 @@
         <p>© 2026 Wellora. Seluruh hak cipta dilindungi. Dibuat untuk pembelajaran CSS Flexbox Siswa Kelas X RPL.</p>
       </div>
     </footer>
+
+    <!-- Button Back to Top -->
+      <button id="back-to-top" class="back-to-top" 
+      onclick="keAtasHalaman()">
+        <i class="fa-solid fa-arrow-up"></i>
+      </button>
+
+      <script>
+        // Setiap kali user melakukan scroll, jalankan fungsi didalamnya,
+        // Fungsi ini akan memanggil berulang ulang selama pengguna melakukan scroll
+        window.addEventListener('scroll', function() {
+
+          // getElementById = Mengambil elemen html
+          const btnTop = document.getElementById
+          ('back-to-top');
+
+          if(window.scrollY > 300) {
+            btnTop.style.display = 'block' ;
+          } else {
+            btnTop.style.display = 'none' ;
+          }
+        }) 
+
+        function keAtasHalaman() {
+            window.scrollTo({
+              top : 0, behavior: 'smooth'
+              //Bergulir halus ke atas
+            })
+          }
+      </script>
   </body>
 </html>
